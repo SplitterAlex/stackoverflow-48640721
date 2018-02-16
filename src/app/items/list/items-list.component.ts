@@ -22,9 +22,8 @@ export class ItemsListComponent {
   public items$: Observable<string[]>;
 
   constructor(private is: ItemsService) {
-    console.log('constructor');
-    this.is.fetchItems().subscribe();
     this.items$ = this.is.items$;
+    this.is.fetchItems().subscribe();
   }
 
 }
